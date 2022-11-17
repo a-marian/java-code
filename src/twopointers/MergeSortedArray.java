@@ -17,7 +17,6 @@ public class MergeSortedArray {
         int left = m-1, right = n-1;
         int temp = nums1.length -1;
         while(right >= 0){
-
             if(left >= 0 && nums1[left] > nums2[right]){
                 nums1[temp] = nums1[left];
                 temp--;
@@ -38,9 +37,9 @@ public class MergeSortedArray {
          printArray(nums1);
          // Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
          // The result of the merge should be [1,2,2,3,5,6] with the underlined elements coming from nums1.
-         /**
-          * Time Complexity
-          *
-          * **/
     }
 }
+/**
+ * Time Complexity: O(N)
+ * Space complexity:O(1)
+ * **/
