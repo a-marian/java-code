@@ -33,3 +33,7 @@ public class MoveZeros {
        printArray(nums);
     }
 }
+/**
+ * Time Complexity: O(N)
+ * Space complexity:O(1)
+ * **/

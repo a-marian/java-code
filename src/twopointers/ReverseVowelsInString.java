@@ -49,8 +49,8 @@ public class ReverseVowelsInString {
         System.out.println(reverseVowels(s));
         // "hello" -->  "holle"
     }
-    /**
-     * Time Complexity:
-     *
-     * */
 }
+/**
+ * Time Complexity: O(N)
+ * Space complexity:O(1)
+ * **/
