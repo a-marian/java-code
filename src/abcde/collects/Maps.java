@@ -6,6 +6,32 @@ import java.util.function.BiFunction;
 public class Maps {
     public static void main(String[] args) {
 
+        var map = new HashMap<Integer, Integer>();
+        map.put(1,10);
+        map.put(2, 20);
+        map.put(3, null);
+
+        map.merge(1,3, (a, b) -> a + b); // add 3 to value of key=1 -> 3 + 10 => 13
+        map.merge(3,5, (a, b) -> a + b); // add 5 to value of key=3 -> 5 + 0 => 5 as value is null
+        System.out.println(map); // {1=13, 2=20, 3=5}
+
+        Map<String, String> mapo = new HashMap<>();
+        mapo.put("Tom", "bus");
+        mapo.put("Jenny", "monopatin");
+        mapo.put("Ana", "bicycle");
+        mapo.put("Javier", null);
+        mapo.putIfAbsent("Mary", "subway"); // if Mary key does not exit, it will be added to map
+        System.out.println(mapo.containsValue(223)); // false
+        //merge
+        BiFunction<String, String, String> mapper = (v1, v2) -> v1.length() > v2.length() ? v1:v2;
+        mapo.merge("Sam","feet", mapper); // adding new row
+        mapo.merge("Javier", "metro", mapper); // value for Javier key will be metro instead of null
+        System.out.println(mapo); // {Tom=bus, Javier=metro, Ana=bicycle, Jenny=monopatin, Sam=feet, Mary=subway}
+
+//        mapOrTreemap();
+    }
+
+    public static void mapPasswords(){
         Set<String> passwords = new TreeSet<>();
         passwords.add("123456");
         passwords.add("123ABC");
@@ -17,23 +43,6 @@ public class Maps {
         // passwords.add(null); cause NullPointerException in runtime
         passwords.forEach(s -> System.out.print(s + ", "));
         // 11111AB, 123456, 123ABC, Password$1, ZOCALO11, abcdef12, password,
-
-        System.out.println();
-
-
-        Map<String, String> mapo = new HashMap<>();
-        mapo.put("Tom", "bus");
-        mapo.put("Jenny", "monopatin");
-        mapo.put("Ana", "bicycle");
-        mapo.put("Javier", null);
-        mapo.putIfAbsent("Mary", "subway"); // if Mary key does not exit, it will be added to map
-        //merge
-        BiFunction<String, String, String> mapper = (v1, v2) -> v1.length() > v2.length() ? v1:v2;
-        mapo.merge("Sam","feet", mapper); // adding new row
-        mapo.merge("Javier", "metro", mapper); // value for Javier key will be metro instead of null
-        System.out.println(mapo); // {Tom=bus, Javier=metro, Ana=bicycle, Jenny=monopatin, Sam=feet, Mary=subway}
-
-        mapOrTreemap();
     }
 
     public static void mapOrTreemap(){
@@ -69,4 +78,6 @@ public class Maps {
 
         System.out.println("Zoo: " + map.getOrDefault("dog", "animal")); // if dog is not in map animal will be printed
     }
+
+
 }
