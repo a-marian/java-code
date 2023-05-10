@@ -1,9 +1,6 @@
 package abcde.comparing;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Rabbits {
      record Rabbit(int id){}
@@ -30,5 +27,17 @@ public class Rabbits {
         System.out.println(Collections.binarySearch(strings,  "Java"));
         System.out.println(strings);
 
+        Comparator<Integer> lambda = (o1, o2) -> o2 -o1;
+        Comparator<Integer> naturalOrder = Comparator.naturalOrder();
+        Comparator<Integer> reverseOrder = Comparator.reverseOrder();
+
+       // var list = List.of(24, 28, 22, 29, 20); // immutable list compiles but throws UnsupportedOperationException
+        var list = Arrays.asList(24, 28, 22, 29, 20);
+        Collections.sort(list, naturalOrder);
+        Collections.reverse(list);
+        System.out.println(list); // [29, 28, 24, 22, 20]
+        Collections.reverse(list);
+        System.out.println(list); // [20, 22, 24, 28, 29]
+        System.out.println(Collections.binarySearch(list, 22)); // 1
     }
 }
