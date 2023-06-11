@@ -18,7 +18,6 @@ public class BestTimeToBuySellStock {
         int N = prices.length;
         int maxProfit = 0;
         int buyProfit = prices[0];
-
         for(int i=0; i <  N; i++){
                 buyProfit = Math.min(prices[i] , buyProfit);
                 maxProfit = Math.max(prices[i]-buyProfit, maxProfit);
@@ -37,5 +36,5 @@ public class BestTimeToBuySellStock {
 /**
  * Time Complexity: O(N)
  * Space Complexity: O(1)
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * https://leetcode.com/problems/best-time-to-buy-and-selﬁl-stock/
  * **/
