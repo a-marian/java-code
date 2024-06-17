@@ -32,6 +32,8 @@ public class LongestPalindrome {
         }
         int res = 0;
         for (int i: memo) {
+
+           char a = (char) i;
             res += i/2*2;
             if(res%2 == 0 && i % 2 == 1)
                 res++;
