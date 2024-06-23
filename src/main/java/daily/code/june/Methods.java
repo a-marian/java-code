@@ -1,13 +1,69 @@
 package daily.code.june;
 
-public class Methods {
+import abcde.classes.Animal;
 
-    public static void main(String[] args) {
-        var sb= new StringBuilder("MARIANELAALEX");
-        System.out.println(sb.reverse());
+import java.time.LocalDateTime;
+import java.util.Arrays;
+
+public class Methods {
+        static String var;
+
+
+    public  static void main(String... args) {
+        Integer bad= 5;
+        short gorilla = 8;
+        Short gorillaLong = gorilla;
+        var="Hola estatico";
+        System.out.println("var = " + var);
+        String[] movies = {"Inside out", "Kunfu PAnda", "Mi villano favorito"};
+        cinema(LocalDateTime.now(), movies , "luna", "sol", "flor", null);
+        //effectivelyFinal();
+        // checkZooAnimal();
+    }
+    private void feed(){
+        int monkey=0;
+        if(monkey >0){
+            var giraffe= monkey++;
+            String name;
+            name = "geoffrey";
+        }
+        String name = "milly";
+        var food=10;
+        while(monkey <=10){
+            food=0;
+        }
+        name=null;
     }
 
-         static void otherExamples(){
+    public static void cinema(LocalDateTime dateTime, String[] movies, String... customers){
+
+        System.out.println("dateTime = " + dateTime);
+        Arrays.stream(movies).forEach(System.out::println);
+        System.out.println("customers = " +Arrays.toString(customers));
+
+    }
+    public static String effectivelyFinal(String[]aa, int... vals){
+         String name = "Harry the Hippo";
+        var size=10;
+        boolean wet;
+        if(size > 100) size++;
+        name.substring(0);
+        wet = true;
+        return name;
+    }
+    public static void checkZooAnimal(){
+        final int rest=5;
+        final abcde.classes.Animal animal = new Animal(12);
+        System.out.println("animal = " + animal);
+        final int[] friends = new int[4];
+        friends[0] =6;
+        friends[2] =3;
+        Arrays.stream(friends).forEach(System.out::println);
+    }
+
+         static void otherStringExamples(){
+             var sb= new StringBuilder("MARIANELAALEX");
+             System.out.println(sb.reverse());
             ///prints alphabet
              for (char i = 'a'; i <= 'z' ; i++) {
                  System.out.print(i+" ");
