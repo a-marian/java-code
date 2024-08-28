@@ -1,4 +1,4 @@
-package abcde.mammal;
+package daily.code.abcde.mammal;
 
 abstract class Animal {
 

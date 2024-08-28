@@ -1,6 +1,6 @@
-package abcde.abstractclass.interfaces;
+package daily.code.abcde.abstractclass.interfaces;
 
-public class Snake implements Soar {
+public class Snake implements abcde.abstractclass.interfaces.Soar {
     @Override
     public void fly(int speed) {
 
@@ -18,7 +18,7 @@ public class Snake implements Soar {
 
     @Override
     public double getTemperature() {
-        return Soar.super.getTemperature();
+        return abcde.abstractclass.interfaces.Soar.super.getTemperature();
     }
 
     @Override
