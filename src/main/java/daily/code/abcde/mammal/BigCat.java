@@ -1,5 +1,5 @@
 package abcde.mammal;
 
-public  abstract class BigCat extends Mammal{
+public  abstract class BigCat {
     protected abstract void roar();
 }
