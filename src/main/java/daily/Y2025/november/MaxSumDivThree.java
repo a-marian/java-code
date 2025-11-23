@@ -1,5 +1,9 @@
 package daily.Y2025.november;
 
+/**
+ * https://leetcode.com/problems/greatest-sum-divisible-by-three/
+ * 1262. Greatest Sum Divisible by Three
+ * */
 public class MaxSumDivThree {
 
     public static void main(String[] args) {
